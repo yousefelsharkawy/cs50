@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>HomePage: The Four Seasons!</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <style>
+          body{
+            background-image: url("homepage.jpg");
+          }
+          p{
+            background-color:rgb(240,255,255,0.4);
+          }
+          .summer
+          {
+            display:none;
+          }
+          .winter{
+            display:none;
+          }
+          .spring{
+            display:none;
+          }
+          .autumn{
+            display:none;
+          }
+        </style>
+        <script>
+          function showpics(){
+            let name = document.querySelector("#text").value.toLowerCase();
+            if((name === "summer") || (name === "autumn") || (name === "spring") || (name === "winter"))
+            {
+              document.querySelector("#statement").innerHTML = "Enjoy some " + name + " pics!";
+              document.querySelector("#statement").style.visibility = "visible";
+              var x = document.getElementsByClassName(name);
+              var i;
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+              }
+            }
+            else{
+              alert("Enter One of The Four Seasons Only! and NO spaces After!")
+            }
+          }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">HomePage</a>
+
+          <div class="dropdown" id="downbar">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seasons of the year
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="spring.html">spring</a>
+              <a class="dropdown-item" href="summer.html">summer</a>
+              <a class="dropdown-item" href="autumn.html">autumn</a>
+              <a class="dropdown-item" href="winter.html">winter</a>
+            </div>
+          </div>
+        </nav>
+        <div class="container" id="container">
+          <div class="row">
+            <h1 class="col-sm-12 col-md-12 col-lg-12">The Four Seasons: Change Marks The Passing of a Year</h1>
+            <img src="seasons.jpg" alt="The Four Seasons Effect" class="col-sm-6 col-md-6 col-lg-6">
+            <p class="col-sm-12 col-md-12 col-lg-12" >The passing of a year can bring a marked change in the weather and the surrounding environment. The four seasons — winter, spring, summer, autumn — can vary significantly in characteristics, and can prompt changes in the world around them. Let's take an overview of these four separate periods.</p>
+            <h2 class="col-sm-12 col-md-12 col-lg-12">The Annual Cycle</h2>
+            <p class="col-sm-12 col-md-12 col-lg-12">Attributes of the seasons may vary by location, but there are still broad definitions that cross most of the boundaries.</p>
+            <p class="col-sm-12 col-md-12 col-lg-12" id="sprig">In the spring, seeds take root and vegetation begins to grow. The weather is warmer, and often wetter. Animals wake or return from warmer climates, often with newborns. Melting snow from the previous season, along with increased rainfall, can cause flooding along waterways, according to the Federal Emergency Management Agency (FEMA). </p>
+            <p class="col-sm-12 col-md-12 col-lg-12" id="summer">In the summer, temperatures may increase to their hottest of the year. If they spike too high, heat waves or droughts may cause trouble for people, animals, and plants. For example, in the summer of 2003, the high temperatures claimed more than 30,000 lives, according to Encyclopedia Britannica. Rainfall may increase in some areas, as well. Others may receive less water, and forest fires may become more frequent. </p>
+            <p class="col-sm-12 col-md-12 col-lg-12" id="autumn">In the autumn, or fall, temperatures cool again. Plants may begin to grow dormant. Animals might prepare themselves for the upcoming cold weather, storing food or traveling to warmer regions. Various cultures have celebrated bountiful harvests with annual festivals. Thanksgiving is a good example. "Thanksgiving in the United States is a historical commemoration but it has a spiritual dimension strongly associated with homecoming and giving praise for what has been bestowed upon us," Cristina De Rossi, an anthropologist at Barnet and Southgate College in London, told Live Science.  </p>
+            <p class="col-sm-12 col-md-12 col-lg-12" id="winter">Winter often brings a chill. Some areas may experience snow or ice, while others see only cold rain. Animals find ways to warm themselves, and may have changed their appearance to adapt. "In a similar way to the Autumnal theme, Winter festivals celebrate the return of the light during a time of deepest physical darkness," said De Rossi. The Indian festival of Diwali, for example, which takes place between October and November, celebrates the triumph of righteousness, and of light over darkness.</p>
+            <h2 class="col-sm-12 col-md-12 col-lg-12">What is Your Favourite Season?</h2>
+            <div class="col-sm-12 col-md-12 col-lg-12" style="margin-bottom:20px;">
+              <input type="text" id="text" >
+              <button id="button" type="button" value="send" class="btn btn-primary" onclick="showpics();">Submit</button>
+            </div>
+            <h2 style="visibility:hidden;" id="statement" class="col-sm-12 col-md-12 col-lg-12">Enjoy</h2>
+            <img src="autumn2.jpg" class="col-sm-6 col-md-6 col-lg-6 autumn" alt="autumn pic">
+            <img src="autumn3.jpg" class="col-sm-6 col-md-6 col-lg-6 autumn" alt="autumn pic">
+            <img src="autumn4.jpg" class="col-sm-6 col-md-6 col-lg-6 autumn" alt="autumn pic">
+            <img src="autumn5.jpg" class="col-sm-6 col-md-6 col-lg-6 autumn" alt="autumn pic">
+            <img src="summer2.jpg" class="col-sm-6 col-md-6 col-lg-6 summer" alt="summer pic">
+            <img src="summer3.jpg" class="col-sm-6 col-md-6 col-lg-6 summer" alt="summer pic">
+            <img src="summer4.jpg" class="col-sm-6 col-md-6 col-lg-6 summer" alt="summer pic">
+            <img src="summer5.jpg" class="col-sm-6 col-md-6 col-lg-6 summer" alt="summer pic">
+            <img src="spring2.jpg" class="col-sm-6 col-md-6 col-lg-6 spring" alt="spring pic">
+            <img src="spring3.jpg" class="col-sm-6 col-md-6 col-lg-6 spring" alt="spring pic">
+            <img src="spring4.jpg" class="col-sm-6 col-md-6 col-lg-6 spring" alt="spring pic">
+            <img src="spring5.jpg" class="col-sm-6 col-md-6 col-lg-6 spring" alt="spring pic">
+            <img src="winter2.jpg" class="col-sm-6 col-md-6 col-lg-6 winter" alt="winter pic">
+            <img src="winter3.jpg" class="col-sm-6 col-md-6 col-lg-6 winter" alt="winter pic">
+            <img src="winter4.jpg" class="col-sm-6 col-md-6 col-lg-6 winter" alt="winter pic">
+            <img src="winter5.jpg" class="col-sm-6 col-md-6 col-lg-6 winter" alt="winter pic">
+          </div>
+        </div>
+    </body>
+</html>

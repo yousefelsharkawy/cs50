@@ -1,0 +1,6 @@
+prompet the user for height 
+if height is less than 1 or bigger than 8 go back to step 1 
+make a loop for rows number that counts up to height 
+make a loop inside the loop at step 3 for spaces ( for each row,the number of spaces equals height number-the row number)
+make a loop inside the loop at step 3 for hashs ( the number of hashes equal the row number)
+make a new line at the end of the rows loop 

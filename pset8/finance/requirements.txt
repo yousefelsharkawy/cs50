@@ -1,0 +1,6 @@
+cs50
+Flask
+Flask-Session
+requests
+
+SELECT symbol, name, sum(shares) total FROM "purchases" group by buyer_id, symbol, name having buyer_id = 2

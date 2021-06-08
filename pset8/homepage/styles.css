@@ -1,0 +1,39 @@
+@media (min-width : 992px)
+{
+    #downbar{
+        position:absolute;
+        right:0px;
+    }
+}
+.container{
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+}
+p{
+    text-align:justify;
+}
+h2{
+    text-align:center;
+    font-style:oblique;
+}
+h1{
+    font-style:italic;
+    text-align:center;
+}
+#container{
+    margin-top:20px;
+}
+a:visited{
+    background-color:#666633;
+}
+img{
+    position:absolute;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:20px;
+    height:360px;
+}
+form{
+    margin-bottom:20px;
+}
